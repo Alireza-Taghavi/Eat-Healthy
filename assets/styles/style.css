@@ -1,0 +1,358 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/Effra_Std_Rg.woff") format("woff");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+body {
+    background-color: #4F3D9C;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.jst-cnt-cnt {
+    justify-content: center;
+}
+
+.jst-cnt-btw {
+    justify-content: space-between;
+}
+
+.jst-cnt-evn {
+    justify-content: space-evenly;
+}
+
+.align-itms-cnt {
+    align-items: center;
+}
+
+.align-itms-strt {
+    align-items: start;
+}
+
+.align-itms-end {
+    align-items: end;
+}
+
+.gap1 {
+    gap: 1rem;
+}
+
+.gap0-5 {
+    gap: 0.5rem;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-image: url("../pics/haeder.png");
+    height: 16%;
+    padding-right: 10rem;
+    align-items: center;
+    z-index: 3;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.header-pic {
+    position: relative;
+    top: 30%;
+    width: 14%;
+    height: 90%;
+}
+
+.container {
+    position: absolute;
+    top: 16%;
+    left: 0;
+    width: 100%;
+    height: 84%;
+}
+
+aside {
+    background: #3F2F88;
+    height: 100%;
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.payment {
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.dlr::after {
+    content: "$";
+}
+
+.dis-code-label {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.dis-inputs {
+    width: 90%;
+}
+
+#dis-code {
+    border: none;
+    border-radius: 2rem 0 0 2rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    height: 2.5rem;
+    width: 90%;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.dis {
+    width: 100%;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+#submit-dis {
+    border: none;
+    border-radius: 0 2rem 2rem 0;
+    padding: 0.2rem 0.5rem;
+    background-color: #FEA414;
+    height: 3.5rem;
+
+}
+
+i.fa-check {
+    color: white;
+    padding: 0 0.4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.numbers {
+    background-color: white;
+    gap: 0.4rem;
+    border-radius: 4.5rem;
+    padding: 1rem;
+    width: 90%;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+
+.total {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.total-price {
+    color: lightgreen;
+}
+
+#submit {
+    width: 90%;
+    background-color: #FEA414;
+    /*height: 2.5rem;*/
+    border-radius: 2rem;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    opacity: 60%;
+}
+
+.not-hr {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.list-item {
+    background-image: linear-gradient(to right, #FFAB09, #FDCC41);
+    padding: 1.4rem;
+    color: #512A5C;
+    font-weight: bolder;
+}
+
+.btn-plus, .btn-minus {
+    background-color: transparent;
+    border: none;
+    /*font-weight: bolder;*/
+    color: #512A5C;
+    font-size: 1.1rem;
+
+}
+
+.btns {
+    margin-left: 1rem;
+}
+
+.close-btn {
+    background-color: #512A5C;
+    color: white;
+    border: none;
+    font-weight: bolder;
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+.input-number {
+    background-color: transparent;
+    width: 1.2rem;
+    text-align: center;
+    border: none;
+    font-weight: bolder;
+    color: #512A5C;
+    font-size: 1.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.right {
+    gap: 1rem;
+    height: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.right span {
+    font-weight: bolder;
+    font-size: 1.5rem;
+
+}
+
+main {
+    background-color: white;
+    border-radius: 4rem 0 0 0;
+    justify-content: center;
+    align-items: center;
+    align-content: start;
+    gap: 1.4rem;
+    padding: 5% 5% 1%;
+}
+
+.item {
+    background: linear-gradient(to right, #F8C065, #C7AFF8);
+    border-radius: 1.5rem;
+    padding: 2rem 0 2rem 2rem;
+    font-weight: bolder;
+    color: #fff;
+    width: 16rem;
+    height: 8rem;
+    margin: 1rem 0;
+}
+
+.item-pic {
+
+    border-radius: 50%
+}
+
+.fa-star {
+    color: #ffff40;
+}
+
+.left-item {
+    justify-content: space-between;
+
+}
+
+
+.each-price {
+    text-align: right;
+    margin-top: -1.5rem;
+}
+
+.each-price::before {
+    color: lightgreen;
+    content: "$ ";
+
+}
+
+.amount {
+    position: relative;
+    top: -50%;
+    transform: translate(0, 5%);
+    color: #fff;
+    z-index: 2;
+
+}
+
+.item-amount {
+    position: relative;
+    top: -10%;
+    font-size: 0.7rem;
+}
+
+.fa-certificate {
+    color: #ffda45;
+    font-size: 1.5rem;
+}
+
+.txt-lft {
+    text-align: left;
+}
+
+.pic-holder {
+    width: 9rem;
+    height: 9rem;
+    position: relative;
+    top: -1rem;
+}
+.right-item{
+    justify-content: flex-end;
+}

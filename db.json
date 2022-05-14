@@ -1,0 +1,42 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "foodName": "Poke with Chicken",
+      "price": "34.45",
+      "stars": "5",
+      "imageLink": "https://s6.uupload.ir/files/plate-3_2pav.png"
+    },
+    {
+      "id": 2,
+      "foodName": "Spicy Rote Pasta and Cheese",
+      "price": "139.99",
+      "stars": "3.9",
+      "imageLink": "https://s6.uupload.ir/files/plate-1_ttua.png"
+    },
+    {
+      "id": 3,
+      "foodName": "Cured Salmon",
+      "price": "29.99",
+      "stars": "4.5",
+      "imageLink": "https://s6.uupload.ir/files/plate-2_cmw8.png"
+    },
+    {
+      "id": 4,
+      "foodName": "Stake Beef with special oil",
+      "price": "12.99",
+      "stars": "3.6",
+      "imageLink": "https://s6.uupload.ir/files/plate-3_2pav.png"
+    },
+    {
+      "id": 5,
+      "foodName": "Macaroni baby with red sauce",
+      "price": "15.99",
+      "stars": "2.8",
+      "imageLink": "https://s6.uupload.ir/files/plate-1_ttua.png"
+    }
+  ],
+  "orders":[
+
+  ]
+}
