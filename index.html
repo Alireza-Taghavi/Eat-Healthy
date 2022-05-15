@@ -8,6 +8,32 @@
 
 </head>
 <body class="d-flex flex-column">
+<div class="modal-bg" onclick="">
+    <div class="modal">
+        <div class="modal-header">
+            <button id="modal-close"><i class="fa fa-times"></i></button>
+            <div class="modal-pic"><img src="./assets/pics/plate-1.png" alt="plate-1"></div>
+            <div class="empty"></div>
+        </div>
+        <span id="modal-name">Poke with Chicken</span>
+        <div class="modal-bot">
+            <span class="one dlr">34.5</span>
+            <div class="two rate-holder">
+                <span class="rate">3.9</span>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <div class="three">
+                <button id="lower"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                <input type="text" value="0">
+                <button id="higher"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <div class="four tot">
+                <span>Total: </span>
+                <span class="dlr-green">3777</span>
+            </div>
+        </div>
+    </div>
+</div>
 <header class="d-flex jst-cnt-cnt gap1">
     <h1>EAT HEALTHY</h1>
     <div class="header-pic">
@@ -147,23 +173,19 @@
     </main>
     <aside>
         <div class="list " id="list">
-            <div  class="list-item d-flex flex-column align-itms-cnt">
-                <div class="not-hr d-flex jst-cnt-btw align-itms-cnt">
-                    <div class="lefty d-flex flex-column align-itms-strt gap1">
-                   <span>
+            <div class="list-item d-flex flex-column align-itms-cnt">
+                <div class="not-hr">
+
+                   <span class="jst-slf-str">
                     Poke with Chicken
                    </span>
-                        <div class="btns d-flex gap0-5">
-                            <button class="btn-minus"><i class="fa fa-minus" aria-hidden="true"></i></button>
-                            <input type="number" value="0" class="input-number">
-                            <button class="btn-plus"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                        </div>
-
+                    <button class="close-btn jst-slf-end"><i class="fa fa-times " aria-hidden="true"></i></button>
+                    <div class="btns d-flex gap0-5 jst-slf-str">
+                        <button class="btn-minus"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                        <input type="number" value="0" class="input-number">
+                        <button class="btn-plus"><i class="fa fa-plus" aria-hidden="true"></i></button>
                     </div>
-                    <div class="right d-flex flex-column align-itms-end ">
-                        <button class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></button>
-                        <span class="dlr">100.3</span>
-                    </div>
+                    <span class="dlr jst-slf-end tot">100.3</span>
 
                 </div>
                 <div class="line"></div>
@@ -178,9 +200,9 @@
             </div>
 
             <div class="numbers d-flex flex-column align-itms-cnt">
-                <span>Price: <span class="dlr">100.3</span></span>
-                <span>Taxes: <span class="dlr">10.3</span></span>
-                <span>Discount: <span class="dlr">10.3</span></span>
+                <span>Price: <span class="dlr" id="price">100.3</span></span>
+                <span>Taxes: <span class="dlr" id="taxes">10.3</span></span>
+                <span>Discount: <span class="dlr" id="discount">10.3</span></span>
             </div>
             <span class="total">Total: <span class="total-price dlr">90</span></span>
             <button id="submit">Place Order</button>
