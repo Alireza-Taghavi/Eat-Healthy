@@ -1,10 +1,13 @@
-const main = document.getElementsByTagName("main");
-const list = document.getElementById("list");
-const disInput = document.getElementById("dis-code");
-const disSubmit = document.getElementById("submit-dis");
-const price = document.getElementById("price");
-const taxes = document.getElementById("taxes");
-const discount = document.getElementById("discount");
-const total = document.getElementById("total")
-const submit = document.getElementById("submit");
-
+class getData {
+    constructor(URL){
+        this.URL = URL;
+        this.load();
+    }
+    async load(){
+       this.res = await fetch(this.URL);
+        this.data = await this.res.json();
+        console.log(this.data);
+    }
+}
+const fetchMenu = new getData("http://localhost:3000/menu");
+const fetchOrders = new getData("http://localhost:3000/orders");
