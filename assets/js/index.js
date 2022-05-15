@@ -1,13 +1,25 @@
+let menu, res;
+
 class getData {
-    constructor(URL){
-        this.URL = URL;
-        this.load();
+    constructor() {
+        this.menuConst = "http://localhost:3000/menu";
+        this.ordersConst = "http://localhost:3000/orders";
+        this.loadMenu();
+        this.loadOrders();
     }
-    async load(){
-       this.res = await fetch(this.URL);
-        this.data = await this.res.json();
-        console.log(this.data);
+
+    async loadMenu() {
+        this.res = await fetch(this.menuConst);
+        this.menu = await this.res.json();
+        menu = this.menu;
+        console.log(menu);
+    }
+
+    async loadOrders() {
+        this.res2 = await fetch(this.ordersConst);
+        this.orders = await this.res2.json();
+        console.log(this.orders);
     }
 }
-const fetchMenu = new getData("http://localhost:3000/menu");
-const fetchOrders = new getData("http://localhost:3000/orders");
+
+const head = new getData();
