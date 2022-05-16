@@ -232,7 +232,7 @@ i.fa-check {
     row-gap: 1rem;
 }
 .list{
-    height: 70%;
+    height: 40%;
     overflow: auto;
 }
 .list-item {
