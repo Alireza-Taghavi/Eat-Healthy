@@ -157,16 +157,16 @@
 
             <label class="dis-code-label" for="dis-code">Discount Code?</label>
             <div class="dis-inputs d-flex">
-                <input id="dis-code" placeholder="code" type="text">
-                <button id="submit-dis"><i class="fa fa-check" aria-hidden="true"></i></button>
+                <input  id="dis-code" placeholder="code" type="text">
+                <button onclick="og.renderDiscount()" id="submit-dis"><i class="fa fa-check" aria-hidden="true"></i></button>
             </div>
 
             <div class="numbers d-flex flex-column align-itms-cnt">
-                <span>Price: <span class="dlr" id="price">100.3</span></span>
-                <span>Taxes: <span class="dlr" id="taxes">10.3</span></span>
-                <span>Discount: <span class="dlr" id="discount">10.3</span></span>
+                <span>Price: <span class="dlr" id="price">0</span></span>
+                <span>Taxes: <span class="dlr" id="taxes">0</span></span>
+                <span>Discount: <span class="dlr" id="discount">0</span></span>
             </div>
-            <span class="total">Total: <span class="total-price dlr">90</span></span>
+            <span class="total">Total: <span class="total-price dlr" id="total">0</span></span>
             <button id="submit">Place Order</button>
         </div>
     </aside>
