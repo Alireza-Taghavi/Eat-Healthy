@@ -1,8 +1,15 @@
 const main = document.querySelector("main");
+
 const list = document.getElementById("list");
-const modalBG = document.querySelector(".modal-bg");
-const modal = modalBG.querySelector(".modal")
 const discountInput = document.getElementById("dis-code");
+
+const modalBG = document.querySelector("#modal-bg");
+const modal = modalBG.querySelector(".modal");
+
+const submit = document.getElementById("submit");
+const receiptBG  = document.querySelector("#receipt-bg");
+const receipt = document.querySelector(".receipt");
+const table = document.querySelector("table");
 
 class getData {
     cart = [];
@@ -142,17 +149,49 @@ class getData {
         document.getElementById("discount").innerText = (dis.toFixed(2)).toString();
         document.getElementById("total").innerText = (total.toFixed(2)).toString();
 
+        if(total>0){
+            submit.disabled = false;
+            submit.style.backgroundColor = "#FEA414"
+            submit.innerText="Place Order"
+        }
     }
-
+    openR(){
+        if(parseInt(document.getElementById("total").innerText) !== 0){
+            table.innerHTML ="<thead><tr><th>Name</th><th>Amount</th><th>Price</th></tr></thead><tbody></tbody>";
+            const tbody = document.querySelector("tbody");
+            for (let i = 0; i < this.cart.length; i++) {
+                if (this.cart[i] !== undefined && this.cart[i].amount > 0) {
+                    tbody.innerHTML += `<td>${this.cart[i].name}</td><td>${
+                        this.cart[i].amount
+                    } </td><td class="dlr">${this.cart[i].price}</td>`;
+                }
+            }
+            receiptBG.style.display = "flex";
+        }
+        else{
+        submit.disabled = true;
+        submit.style.backgroundColor = "rgba(151,151,151,0.8)";
+        submit.innerText="Add Some Yummies"
+        }
+    }
+    closeR(){
+        receiptBG.style.display = "none";
+    }
 }
 
 
 const og = new getData();
-
+document.getElementById("modal-close").addEventListener("click", og.closeModal, false);
 modalBG.addEventListener("click", og.closeModal, false);
 modal.addEventListener("click", (event) => {
     event.stopPropagation();
 }, false);
-document.getElementById("modal-close").addEventListener("click", og.closeModal, false);
+
+receiptBG.addEventListener("click", og.closeR, false);
+receipt.addEventListener("click", (event) => {
+    event.stopPropagation();
+}, false);
 
 
+
+document.getElementById("paypal").addEventListener("click", ()=>alert("You live in Iran T_T"))

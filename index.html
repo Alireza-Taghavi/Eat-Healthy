@@ -8,7 +8,7 @@
 
 </head>
 <body class="d-flex flex-column">
-<div class="modal-bg" onclick="">
+<div id="modal-bg" class="modal-bg" onclick="">
     <div class="modal">
         <div class="modal-header">
             <button id="modal-close"><i class="fa fa-times"></i></button>
@@ -32,6 +32,15 @@
                 <span id="modal-total" class="dlr-green">3777</span>
             </div>
         </div>
+    </div>
+</div>
+<div id="receipt-bg" class="modal-bg">
+    <div class="receipt">
+<h2>Receipt</h2>
+    <table>
+
+    </table>
+    <button id="paypal">PayPal</button>
     </div>
 </div>
 <header class="d-flex jst-cnt-cnt gap1">
@@ -167,7 +176,7 @@
                 <span>Discount: <span class="dlr" id="discount">0</span></span>
             </div>
             <span class="total">Total: <span class="total-price dlr" id="total">0</span></span>
-            <button id="submit">Place Order</button>
+            <button class="submit" id="submit" onclick="og.openR()">Place Order</button>
         </div>
     </aside>
 </div>
